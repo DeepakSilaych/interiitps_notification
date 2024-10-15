@@ -1,12 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+import os
 
 URL = "https://interiit-tech.com/problem-statement"
 CHECK_INTERVAL = 300  # seconds
 
-BOT_TOKEN = "7553517442:AAEua2Xd8-p-xmv8o_XidodG4TAs88xHcIE"
-CHAT_ID = "1527878179"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 previous_statements = set()
 
